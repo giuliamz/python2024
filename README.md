@@ -13,9 +13,9 @@ These factors result in a 3 (AV disparity) x 2 (communicativeness) x 2 (task mod
 
 ## Data
 
-1. Participants' average and median **Response Times** for each condition are stored in a .csv file 'rt_direct.csv', with 34 rows (number of participants) and 25 columns (participant id + conditions average and median).
-2. Participants' average **Audiovisual Weight Indexes** (index of audiovisual integration) for each incongruent condition are stored in a .csv file 'subj_wav_direct.csv', with 34 rows (participants) and 8 columns (number of incongruent conditions).
-3. Group **response distributions** are stored in a 3D matrix .mat 'hist_resp_group_mean.mat', which is a 3D 9x3x4 file containing, for each of the 4 CommxTask combinations, the percentage of participants responses for each of the three possible positions (left/center/right), in each of the 9 AV spatial combination (3x3).
+1. Participants' average and median **Response Times** for each condition are stored in a .csv file *'rt_direct.csv'*, with 34 rows (number of participants) and 25 columns (participant id + conditions average and median).
+2. Participants' average **Audiovisual Weight Indexes** (index of audiovisual integration) for each incongruent condition are stored in a .csv file *'subj_wav_direct.csv'*, with 34 rows (participants) and 8 columns (number of incongruent conditions).
+3. Group **response distributions** are stored in a 3D matrix .mat *'hist_resp_group_mean.mat'*, which is a 3D 9x3x4 file containing, for each of the 4 CommxTask combinations, the percentage of participants responses for each of the three possible positions (left/center/right), in each of the 9 AV spatial combination (3x3).
 
 ## Analyses and Plots
 
