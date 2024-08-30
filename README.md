@@ -1,9 +1,11 @@
 # python2024
 Project for the python course 2024
 
-The aim of this project is to perform analyses and plot data from a behavioural experiment. The experiment is a spatial ventriloquis experiment.
+The aim of this project is to perform analyses and plot data from a behavioural experiment. 
 
 ## Experimental design
+
+The experiment is a spatial ventriloquis experiment.
 
 * The auditory and visual stimuli were sampled separately from **three different positions** (left, center and right), and could either be congruent or incongruent, resulting in **3 levels of spatial disparity** (None: 0° of visual angle, Low: 9° of visual angle, High: 18° of visual angle).
 * Stimuli could be **communicative** (video of a person uttering a word) or **non-communicative** (static frame + vocalization)
