@@ -295,7 +295,7 @@ axes[6].set(ylabel='right',xlabel='left')
 axes[7].set(xlabel='center')
 axes[8].set(xlabel='right')
 
-fig.text(0.5, 0.01, 'Acoustic stimuli position', ha='center', fontsize=14)
+fig.text(0.42, 0.01, 'Acoustic stimuli position', ha='center', fontsize=14)
 fig.text(0.01, 0.5, 'Visual stimuli position', va='center', rotation='vertical', fontsize=14)
 
 axes[2].legend(loc='upper left', bbox_to_anchor=(1.01, 1))
