@@ -23,9 +23,9 @@ These factors result in a 3 (AV disparity) x 2 (communicativeness) x 2 (task mod
 
 1. Response Time repeated measures ANOVA
 2. Distribution and box plot of Response Times for each condition
-3. Line plor of group Mean and SEM of the Audiovisual Weight Index for each of the incongruent condition
-4. Correlation plots for each of the incongruent conditions to show the possible relationship between response times and Audiovisual Weight Indexes
-5. Distribution plots of participants responses
+3. Line plot of group Mean and SEM of the Audiovisual Weight Index for each of the incongruent condition
+4. Correlation plots for each of the incongruent conditions to show the possible relationship between Response Times and Audiovisual Weight Indexes
+5. Plots of the participants' responses distributions
 
 ## Libraries
 
