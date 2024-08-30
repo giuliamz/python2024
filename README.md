@@ -1,4 +1,4 @@
-# python2024
+# python2024 - behavioural data analyses and plot
 Project for the python course 2024
 
 The aim of this project is to perform analyses and plot data from a behavioural experiment. 
