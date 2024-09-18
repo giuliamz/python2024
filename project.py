@@ -43,8 +43,6 @@ rt_df_long[['Action', 'Task', 'AV_disparity']] = rt_df_long['Condition'].str.spl
 # sort by participant and reset indexes
 rt_df_long = rt_df_long.sort_values(by = 'Participant')
 rt_df_long = rt_df_long.reset_index(drop = 'true')
-
-
 # In[3]:
 
 
@@ -66,10 +64,11 @@ rt_df_sem = rt_df_long.groupby(['Action', 'Task', 'AV_disparity'])['ResponseTime
 # We plot the distribution and mean Response Times for each condition. The auditory task is on the left blue plot, with light color for communicative conditions and dark color for non-communicative conditions; the visual task is on the right green plot. Response time are represented in the y axis and AV disparity cotegories in the x axis.
 
 # In[5]:
-
+# LP: very neat plot!
 
 # set subplots and axes options
 fig, axes = plt.subplots(1, 2, figsize=(15, 10), sharey=True)
+# LP: minor, but the tick fix could have been done in a loop or defining a mapping with a dict
 axes[0].set(title= 'Auditory Task', ylabel="Response Time (ms)", xticks=[0,1,2,3,4,5], xticklabels=['0', '9', '18', '0', '9', '18'])
 axes[1].set(title= 'Visual Task', xticks=[0,1,2,3,4,5], xticklabels=['0', '9', '18', '0', '9', '18'])
 axes[0].tick_params(axis='x', which='both', length=0)
@@ -89,6 +88,7 @@ sns.despine(ax=axes[1], left=True)
 
 # set legends
 # left plot
+# this could have been done in a loop:
 handles0 = [plt.Line2D([0], [0], marker='o', color='w', markerfacecolor='#a6cee3', markersize=10, linestyle=''),
            plt.Line2D([0], [0], marker='o', color='w', markerfacecolor='#1f78b4', markersize=10, linestyle='')]
 labels0 = ['Communicative', 'Non-communicative']
@@ -128,6 +128,8 @@ sem_wav = s_wav.sem()
 sem_wav = sem_wav.to_dict()
 
 # lines to plot
+# LP: you could have probably thought a way of doing the following ia a bit more of a "looping"
+# way, maybe looping on ["low", "high"] x ["vis" and "aud"] and making the plot in the loop.
 low_aud = ['mean_low_com_aud','mean_low_nc_aud']
 high_aud = ['mean_high_com_aud','mean_high_nc_aud']
 low_vis = ['mean_low_com_vis','mean_low_nc_vis']
@@ -148,6 +150,10 @@ high_vis_sem = [sem_wav[key] for key in high_vis]
 
 fig = plt.figure(figsize=(3,5))
 
+# What I says about the plot starting from 0 applies to when you are making lines that start from the 
+# lower part of the plot, such as barplots (dynamite plots). This is not an issue when you show single points.
+# So, no need to break the y axis! (actually, there's almost never good reasons to break the y axis, that's why 
+# matplotlib does not make it easy!)
 # break y axis
 bax = brokenaxes(ylims=((0, 0.03), (0.38, 1)), hspace=.05)
 
@@ -239,7 +245,7 @@ plt.show()
 
 # In[8]:
 
-
+# LP: I do not have access to this data, it is not in the repo!
 # load matlab data
 # it's a 3D array --> 9 (AV spatial combinations) x 3 (% of responses for each of the 3 possible responses) x 4 (CommxTask combinations)
 data = scipy.io.loadmat('hist_resp_group_mean.mat')
@@ -302,3 +308,5 @@ axes[2].legend(loc='upper left', bbox_to_anchor=(1.01, 1))
 
 plt.tight_layout(rect=[0.02, 0.02, 0.98, 0.98])
 
+
+# %%
